@@ -6,6 +6,28 @@
       "name": "Kenzinho",
       "age": 38,
       "id": 1
+    },
+    {
+      "email": "lucas123@gmail.com",
+      "password": "$2a$10$RJOLgzcWGrFy8Uq1JKrTNOtt0U6D9Iq5TWtlZbHgaV/QyJFXAjtNS",
+      "id": 2
+    }
+  ],
+  "favoriteIds": [
+    {
+      "oi": "tudo bem lucas",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "oi": "tudo bem lucas23",
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "oi": "OBJETO DESESTRUTURADO aKI",
+      "userId": 1,
+      "id": 5
     }
   ]
 }

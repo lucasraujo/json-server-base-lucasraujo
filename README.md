@@ -22,3 +22,52 @@ POST /login <br/>
 POST /signin
 
 Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+
+### Adicionar aos favoritos
+
+POST /favoriteIds <br/>
+
+Voce precisa fornecer o tokem do usuario e o corpo da requisição com o seguinte padrão : 
+
+{
+	"favoriteObject":{"death":12},            <- favoriteObject representa a chave do objeto que iremos favoritar e {"death":12} representa o objeto favoritado <br/>
+	"userId":1                                <-Presisamos pasar o id do usuario  com o a seguinte chave  "userId"
+}
+
+exemplo de resposta: 
+
+{
+	"favoriteObject": { 
+		"death": 12
+	},
+	"userId": 1,
+	"id": 7
+}
+
+### Pegar os favoritos do usuario 
+
+GET /favoriteIds?userId=1  <-colocamos o id do usuario aqui  <br/>
+
+Voce precisa fornecer o tokem do usuario e nao precisa de corpo 
+
+exemplo de resposta: 
+
+[{
+	"favoriteObject": 
+		"death": 12
+	},
+	"userId": 1,
+	"id": 7
+},{
+	"favoriteObject": {
+		"death": 13
+	},
+	"userId": 1,
+	"id": 9
+}]
+
+### Deletar favoritos do usuario
+
+DELETE/ favoriteIds/4  <- O numero 4 representa o id do objeto a ser deletado<br/>
+
+Voce tambem precisa fornecer o tokem do usuario 
